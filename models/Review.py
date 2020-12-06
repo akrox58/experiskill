@@ -7,11 +7,12 @@ from models.Student import Student
 
 
 class Review(db.Document):
-    id = db.UUIDField(required=True)
     created_date = db.DateTimeField(required=True)
     modified_date = db.DateTimeField(required=True)
     description = db.StringField(description='description')
     rating = db.IntField(choices=(1,2,3,4,5), description='star rating')
-    class_id = db.ReferenceField(Classes, 'id')
-    instructor_id = db.ReferenceField(Instructor, 'id')
-    student_id = db.ReferenceField(Student, 'id')
+    review_id = db.UUIDField(required=True)
+    class_id = db.UUIDField(required=True)
+    instructor_id = db.UUIDField(required=True)
+    student_id = db.UUIDField(required=True)
+    is_active = db.BooleanField(default=True)

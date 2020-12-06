@@ -8,14 +8,19 @@ class StudentService(BaseService):
 
     @classmethod
     def create_student_record(cls, **kwargs):
-        payload = kwargs
-        payload['created_date'] = datetime.datetime.utcnow()
-        payload['modified_date'] = datetime.datetime.utcnow()
-        return cls.create_record(Student, **kwargs)
+        return cls.create_record(Student, "student_id", **kwargs)
+
+    @classmethod
+    def get_all_students(cls):
+        return cls.get_all_records(Student)
 
     @classmethod
     def find_student_by_student_id(cls, **payload):
-        return cls.get_by_filter(Student, **payload).first()
+        return cls.get_by_filter(Student, limit=1, **payload)
+
+    @classmethod
+    def find_student_by_params(cls, limit = None, **payload):
+        return cls.get_by_filter(Student, limit=limit, **payload)
 
     @classmethod
     def update_student_profile(cls, filters, **payload):
@@ -23,10 +28,7 @@ class StudentService(BaseService):
 
     @classmethod
     def create_payment_method(cls, **kwargs):
-        payload = kwargs
-        payload['created_date'] = datetime.datetime.utcnow()
-        payload['modified_date'] = datetime.datetime.utcnow()
-        return cls.create_record(PaymentMethod, **kwargs)
+        return cls.create_record(PaymentMethod, "payment_method_id", **kwargs)
 
     @classmethod
     def get_payment_methods(cls, **payload):
