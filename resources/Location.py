@@ -18,11 +18,12 @@ reg_parser.add_argument('longitude', type=float)
 """ 
 Body
 {
+    "location_id": "",
     "city": "Santa Clara",
     "state": "CA",
     "country": "United States",
     "zipcode": 95051,
-    "latittude": 37.3598,
+    "latitude": 37.3598,
     "longitude":  121.9814
 }
 """
@@ -62,6 +63,7 @@ class LocationResource(Resource):
 
     def post(self):
         reg_parser = reqparse.RequestParser()
+        reg_parser.add_argument('location_id', type=str)
         reg_parser.add_argument('city', type=str, required=True)
         reg_parser.add_argument('state', type=str, required=True)
         reg_parser.add_argument('country', type=str, required=True)
@@ -70,7 +72,9 @@ class LocationResource(Resource):
         reg_parser.add_argument('longitude', type=float, required=True)
         payload = strip_payload(reg_parser.parse_args())
         location = self.location_service.find_location_by_params(**{"latitude": payload["latitude"], "longitude": payload["longitude"]})
-        if location:
+        location = json.loads(location)
+        if len(location):
+            print(location)
             return make_response({"message":
                                       "Location with latitude"
                                       + str(payload["latitude"])
@@ -81,7 +85,7 @@ class LocationResource(Resource):
                                  409)
 
         self.location_service.create_location_record(**payload)
-        return make_response({"statusCode": 200, "message": "Location successfully updated"}, 200)
+        return make_response({"statusCode": 200, "message": "Location successfully created"}, 200)
 
     def patch(self, location_id):
         reg_parser = reqparse.RequestParser()

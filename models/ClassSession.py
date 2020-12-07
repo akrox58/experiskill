@@ -1,23 +1,20 @@
 from database.db import fetch_engine
-
 db = fetch_engine()
 
-from models.Classes import Classes
-from models.Instructor import Instructor
-from models.Student import Student
-from models.PaymentMethod import PaymentMethod
-from models.Offer import Offer
-
 class ClassSession(db.Document):
-    id = db.UUIDField(required=True)
     created_date = db.DateTimeField(required=True)
     modified_date = db.DateTimeField(required=True)
+    class_session_id = db.UUIDField(required=True)
     class_id = db.UUIDField(required=True)
     instructor_id = db.UUIDField(required=True)
-    student_id = db.ReferenceField(Student, 'id')
-    class_cost = db.FloatField()
-    currency = db.StringField(choices=('USD'), description='only usd for now')
-    payment_method_id = db.UUIDField(required=True)
-    class_date = db.DateTimeField()
-    duration = db.IntField(description = "number of minutes of the class")
+    student_id = db.UUIDField(required=True)
+    location_id = db.UUIDField(required=True)
     offer_id = db.UUIDField(required=True)
+    class_cost = db.FloatField(required=True)
+    discount = db.FloatField(default=0, required=True)
+    currency = db.StringField(default="USD")
+    class_date = db.DateTimeField()
+    status = db.StringField(default="Scheduled", required=True, choices=["Completed", "Scheduled"])
+    duration = db.IntField(required=True, description = "number of minutes of the class")
+    class_count = db.IntField(required=True, default=1)
+    total = db.FloatField(required=True)

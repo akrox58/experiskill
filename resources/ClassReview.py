@@ -58,6 +58,7 @@ class ClassReviewResource(Resource):
 
     def patch(self, class_id, review_id):
         reg_parser = reqparse.RequestParser()
+        reg_parser.add_argument('class_review_id', type=str)
         reg_parser.add_argument('description', type=str)
         reg_parser.add_argument('instructor_id', type=str)
         reg_parser.add_argument('student_id', type=str)

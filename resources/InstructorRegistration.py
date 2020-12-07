@@ -16,6 +16,7 @@ reg_parser.add_argument('lname', type=str, required=True)
 reg_parser.add_argument('city', type=str, required=True)
 reg_parser.add_argument('state', type=str, required=True)
 reg_parser.add_argument('zipcode', type=str, required=True)
+reg_parser.add_argument('instructor_id', type=str, required=True)
 
 """ 
 Body

@@ -2,39 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c282b2e-14e3-48aa-8696-67c838cfa913" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/ClassReview.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/ClassSession.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Classes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Location.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Offer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Reset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/StudentClassSession.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/ClassService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/ClassSessionService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/LocationService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/PricingService.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/OfferUsage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/ClassSession.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/ClassSession.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Instructor.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Instructor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Location.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Location.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Message.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Notification.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Offer.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Offer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/PaymentMethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/PaymentMethod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Post.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Review.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Review.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Student.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Instructor.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Instructor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/PaymentMethod.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ClassReview.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ClassReview.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ClassSession.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ClassSession.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Classes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/InstructorRegistration.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/InstructorRegistration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Student.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/StudentPaymentMethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/StudentPaymentMethod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Location.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Location.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Offer.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Offer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Reset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/StudentClassSession.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/StudentPaymentMethod.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/StudentRegistration.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/StudentRegistration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/BaseService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/BaseService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/ClassSessionService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/ClassSessionService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/InstructorService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/InstructorService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LocationService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LocationService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/PricingService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/PricingService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/StudentService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/StudentService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,22 +50,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/services" />
       <recent name="$PROJECT_DIR$/utils" />
-      <recent name="$PROJECT_DIR$/models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/database" />
       <recent name="$PROJECT_DIR$/models" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.server">
     <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="experiskill" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,9 +88,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="setup.sh" type="ShConfigurationType" temporary="true">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/setup.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.server" />
+        <item itemvalue="Shell Script.setup.sh" />
       </list>
     </recent_temporary>
   </component>

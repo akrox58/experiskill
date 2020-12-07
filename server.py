@@ -6,7 +6,6 @@ from authentication.jwt import initialize_jwt
 
 from resources.Student import StudentResource
 from resources.StudentRegistration import StudentRegistrationResource
-from resources.StudentPaymentMethod import StudentPaymentMethodResource
 from resources.StudentLogin import StudentLoginResource
 from resources.InstructorLogin import InstructorLoginResource
 from resources.Instructor import InstructorResource
@@ -16,7 +15,7 @@ from resources.Offer import OfferResource
 from resources.ClassReview import ClassReviewResource
 from resources.Location import LocationResource
 from resources.ClassSession import ClassSessionResource
-
+from resources.Reset import ResetResource
 app = Flask(__name__)
 app.config['MONGODB_SETTINGS'] = {
     'db': 'experiskill',
@@ -33,7 +32,6 @@ api = Api(app)
 api.add_resource(StudentRegistrationResource, '/student/register')
 api.add_resource(StudentLoginResource, '/student/login')
 api.add_resource(StudentResource, '/student', '/student/<string:student_id>')
-api.add_resource(StudentPaymentMethodResource, '/student/<string:student_id>/payment-method')
 api.add_resource(InstructorRegistrationResource, '/instructor/register')
 api.add_resource(InstructorLoginResource, '/instructor/login')
 api.add_resource(InstructorResource, '/instructor', '/instructor/<string:instructor_id>')
@@ -41,6 +39,7 @@ api.add_resource(LocationResource, '/location', '/location/<string:location_id>'
 api.add_resource(ClassResource, '/class', '/class/<string:class_id>')
 api.add_resource(ClassReviewResource, '/class/<string:class_id>/review', '/class/<string:class_id>/review/<string:review_id>')
 api.add_resource(OfferResource, '/offer', '/offer/<string:offer_id>')
-
+api.add_resource(ResetResource, '/reset')
+api.add_resource(ClassSessionResource, '/class-session')
 if __name__ == '__main__':
     app.run()

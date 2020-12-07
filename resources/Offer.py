@@ -15,7 +15,7 @@ Body
 {
     "description": "offer description",
     "value": 5,
-    "offer_type": "Referral",
+    "offer_type": "Offer",
     "max_count": 100,
     "currency": "USD",
     "instructor_id": "instructorId",
@@ -42,8 +42,9 @@ class OfferResource(Resource):
 
     def post(self):
         reg_parser = reqparse.RequestParser()
+        reg_parser.add_argument('offer_id', type=str)
         reg_parser.add_argument('description', type=str)
-        reg_parser.add_argument('instructor_id', type=str)
+        reg_parser.add_argument('instructor_id', type=str, required=True)
         reg_parser.add_argument('student_id', type=str)
         reg_parser.add_argument('location_id', type=str)
         reg_parser.add_argument('class_id', type=str)
@@ -56,18 +57,24 @@ class OfferResource(Resource):
         found_offer = self.offer_service.get_offers_by_filter(limit=1, **body)
         if found_offer:
             return make_response({"statusCode": 400, "message": "Offers with these details already exist"}, 400)
-        found_class =  self.class_service.get_classes_by_filter(limit=1, **{"class_id": body["class_id"]})
-        if not found_class:
-            return make_response({"statusCode": 400, "message": "Unidentified Class"}, 400)
-        found_location = self.location_service.find_location_by_location_id(**{"location_id": body["location_id"]})
-        if not found_location:
-            return make_response({"statusCode": 400, "message": "Unidentified location"}, 400)
-        found_instructor = self.instructor_service.find_instructor_by_instructor_id(**{"instructor_id": body["instructor_id"]})
+        if "class_id" in body:
+            found_class =  self.class_service.get_classes_by_filter(limit=1, **{"class_id": body["class_id"]})
+            if not found_class:
+                return make_response({"statusCode": 400, "message": "Unidentified Class"}, 400)
+        if "location_id" in body:
+            found_location = self.location_service.find_location_by_location_id(**{"location_id": body["location_id"]})
+            if not found_location:
+                return make_response({"statusCode": 400, "message": "Unidentified location"}, 400)
+        if "student_id" in body:
+            found_student = self.student_service.find_student_by_student_id(**{"student_id": body["student_id"]})
+            if not found_student:
+                return make_response({"statusCode": 400, "message": "Unidentified student"}, 400)
+
+        found_instructor = self.instructor_service.find_instructor_by_instructor_id(
+            **{"instructor_id": body["instructor_id"]})
         if not found_instructor:
             return make_response({"statusCode": 400, "message": "Unidentified instructor"}, 400)
-        found_student = self.student_service.find_student_by_student_id(**{"student_id": body["student_id"]})
-        if not found_student:
-            return make_response({"statusCode": 400, "message": "Unidentified student"}, 400)
+
         self.offer_service.create_offer_record(**body)
         return make_response({"statusCode": 200, "message": "Offer successfully added"}, 200)
 
@@ -80,7 +87,6 @@ class OfferResource(Resource):
         reg_parser.add_argument('class_id', type=str)
         reg_parser.add_argument('offer_type', type=str)
         reg_parser.add_argument('max_count', type=int)
-        reg_parser.add_argument('redeemed_count', type=int)
         reg_parser.add_argument('value', type=int)
         reg_parser.add_argument('currency', type=str)
         reg_parser.add_argument('is_active', type=bool)

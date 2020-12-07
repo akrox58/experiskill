@@ -14,7 +14,8 @@ Body
     "description": "class description",
     "instructor_id": "afsfasd",
     "location_id": "asfdasf",
-    "class_level": 1
+    "class_level": 1,
+    "duration": 60
 }
 """
 
@@ -33,11 +34,15 @@ class ClassResource(Resource):
 
     def post(self):
         reg_parser = reqparse.RequestParser()
+        reg_parser.add_argument('class_id', type=str)
         reg_parser.add_argument('description', type=str)
         reg_parser.add_argument('instructor_id', type=str)
         reg_parser.add_argument('location_id', type=str)
         reg_parser.add_argument('format', type=str)
         reg_parser.add_argument('class_level', type=int)
+        reg_parser.add_argument('duration', type=int)
+        reg_parser.add_argument('class_count', type=int)
+        reg_parser.add_argument('class_cost', type=int)
         body = strip_payload(reg_parser.parse_args())
         found_class =  self.class_service.get_classes_by_filter(limit=1, **body)
         if found_class:

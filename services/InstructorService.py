@@ -1,6 +1,5 @@
 from services.BaseService import BaseService
 from models.Instructor import Instructor
-from models.PaymentMethod import PaymentMethod
 import datetime, uuid, jsonify, bson
 
 
@@ -19,8 +18,8 @@ class InstructorService(BaseService):
         return cls.get_by_filter(Instructor, limit=1, **payload)
 
     @classmethod
-    def find_instructor_by_params(cls, **payload):
-        return cls.get_by_filter(Instructor, limit=None, **payload)
+    def find_instructor_by_params(cls, limit, **payload):
+        return cls.get_by_filter(Instructor, limit=limit, **payload)
 
     @classmethod
     def update_instructor_profile(cls, filters, **payload):

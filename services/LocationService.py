@@ -1,6 +1,5 @@
 from services.BaseService import BaseService
 from models.Location import Location
-from models.PaymentMethod import PaymentMethod
 import datetime, uuid, jsonify, bson
 
 

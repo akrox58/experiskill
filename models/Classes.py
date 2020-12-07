@@ -13,4 +13,7 @@ class Classes(db.Document):
     description = db.StringField(description='class description')
     format = db.StringField(choices=('OFFLINE','ONLINE'), default='OFFLINE')
     class_level = db.IntField(choices=(1,2,3,4,5), description='difficulty level')
+    class_cost = db.FloatField(required=True)
     is_active = db.BooleanField(default=True)
+    duration = db.IntField(required=True, description="number of minutes of the class")
+    class_count = db.IntField(default=1, required=True, description="number of minutes of the class")

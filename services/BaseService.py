@@ -8,7 +8,7 @@ class BaseService:
         payload = kwargs
         payload['created_date'] = datetime.datetime.utcnow()
         payload['modified_date'] = datetime.datetime.utcnow()
-        payload[record_id] = uuid.uuid4()
+        #payload[record_id] = uuid.uuid4()
         new_record = ServiceModel(**payload)
         new_record.save()
         return {"statusCode": 200, "message": "successfully inserted record"}
@@ -54,5 +54,9 @@ class BaseService:
 
     @classmethod
     def delete_all(self, model):
-        model.objects.delete_many()
+        model.objects.delete()
         return {"statusCode": 200, "message": "successfully deleted records"}
+
+    @classmethod
+    def get_by_filter_and_paginate(self, model, limit=1, **filters):
+        return model.objects.paginate(1, limit)
