@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c282b2e-14e3-48aa-8696-67c838cfa913" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/OfferUsage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ClassSession.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/ClassSession.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Offer.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Offer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/PaymentMethod.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/ClassReview.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ClassReview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/ClassSession.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ClassSession.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/InstructorRegistration.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/InstructorRegistration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Location.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Location.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Offer.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Offer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Reset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/StudentClassSession.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/StudentPaymentMethod.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/StudentRegistration.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/StudentRegistration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/BaseService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/BaseService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/ClassSessionService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/ClassSessionService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/InstructorService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/InstructorService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/LocationService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LocationService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/PricingService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/PricingService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/StudentService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/StudentService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
