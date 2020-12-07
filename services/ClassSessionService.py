@@ -23,8 +23,12 @@ class ClassSessionService(BaseService):
         return cls.get_by_filter(ClassSession, limit, **payload)
 
     @classmethod
-    def find_class_sessions_by_params_and_paginate(cls, limit=1, **payload):
-        return cls.get_by_filter_and_paginate(ClassSession, limit, **payload)
+    def find_class_sessions_and_paginate(cls, limit=1):
+        return cls.get_by_filter_and_paginate(ClassSession, limit)
+
+    @classmethod
+    def paginate_class_session(cls, page_number=1, per_page=1):
+        return cls.do_pagination(ClassSession, page_number, per_page)
 
     @classmethod
     def update_class_session_details(cls, filters, **payload):

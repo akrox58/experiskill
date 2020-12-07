@@ -17,3 +17,5 @@ sh setup.sh
 
 ##### Refer to test_input_output for the curl commands tested
 ### Google doc link for Resource Definitions: https://docs.google.com/document/d/1AGyUUgF_xguGsWF-2KRBnAGBAajnYcVAIVabYBfNWCE/edit?usp=sharing
+
+##Refer to postman collection for list of apis

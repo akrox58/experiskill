@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c282b2e-14e3-48aa-8696-67c838cfa913" name="Default Changelist" comment="" />
+    <list default="true" id="1c282b2e-14e3-48aa-8696-67c838cfa913" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Experiskill.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ClassSession.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ClassSession.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/BaseService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/BaseService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/ClassSessionService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/ClassSessionService.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

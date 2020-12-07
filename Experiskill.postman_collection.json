@@ -1,0 +1,1196 @@
+{
+	"info": {
+		"_postman_id": "3e8cff83-5a0d-401e-9d0b-7b543cff789f",
+		"name": "Experiskill",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "StudentRegister",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/student/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": \"afe4aaa8-eea8-4435-8553-28a7745007a9\",\n    \"email\": \"student4\",\n    \"username\": \"student4\",\n    \"password\": \"student4\",\n    \"fname\": \"Student4\",\n    \"lname\": \"Student4\",\n    \"city\": \"Santa Clara\",\n    \"state\": \"CA\",\n    \"zipcode\": 95054\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/student/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"student",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "StudentLogin",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/student/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"student3\",\n    \"password\": \"student3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/student/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"student",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1c698fcc-e283-4954-8acb-71c5b2ec270e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "13219624-54f2-4778-b6c8-00395ac34caa",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "/student",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/student",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/student/:studentId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_active\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/student/c497999d8bf9475cb92cf464860bc683",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"student",
+								"c497999d8bf9475cb92cf464860bc683"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "student/:studentId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/student/c497999d8bf9475cb92cf464860bc683",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"student",
+								"c497999d8bf9475cb92cf464860bc683"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "InstructorRegister",
+			"item": [
+				{
+					"name": "/instructor/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"instructor_id\": \"e3f1c7ab-5511-42cf-bf6c-3245fd13ad56\",\n    \"email\": \"instructor1\",\n    \"username\": \"instructor1\",\n    \"password\": \"instructor1\",\n    \"fname\": \"Instructor1\",\n    \"lname\": \"Instructor1\",\n    \"city\": \"Santa Clara\",\n    \"state\": \"CA\",\n    \"zipcode\": 95051\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/instructor/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"instructor",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "InstructorLogin",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/student/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"instructor3\",\n    \"password\": \"instructor3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/instructor/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"instructor",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "daae4227-b813-430a-b39b-1bb127541354",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0ab3703-6b3e-4d95-81d9-6c4812f1876c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Instructor",
+			"item": [
+				{
+					"name": "/instructor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/instructor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/instructor/:instructorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/instructor/ee233334ba9a42d389919fdcbb817264",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"instructor",
+								"ee233334ba9a42d389919fdcbb817264"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/instructor/:instructorId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fname\": \"B\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/instructor/ee233334ba9a42d389919fdcbb817264",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"instructor",
+								"ee233334ba9a42d389919fdcbb817264"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/instructor/:instructorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fname\": \"B\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/instructor/ee233334ba9a42d389919fdcbb817264",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"instructor",
+								"ee233334ba9a42d389919fdcbb817264"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Class",
+			"item": [
+				{
+					"name": "/class",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"class1\",\n    \"class_level\": 1,\n    \"format\": \"OFFLINE\",\n    \"duration\": 60,\n    \"instructor_id\": \"20f5e9f6-1a96-45ee-b7fb-34d75c549a7f\",\n    \"location_id\": \"701d4aec-5343-40fa-a48c-15926c89e445\",\n    \"class_id\": \"3a7f2cbf-51cc-4cfb-8d9c-cbf6ee670f7e\",\n    \"class_cost\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/class/:classId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"class description 3\",\n    \"instructor_id\":\"5c2d4788371911eb98b67140ba9533a5\",\n    \"location_id\": \"8f0fd0247b6040be896db9a4b4b3ac60\",\n    \"class_level\": 3,\n    \"format\": \"OFFLINE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class/561ec5cab9e44cdb8f742f16e1bffc01",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class",
+								"561ec5cab9e44cdb8f742f16e1bffc01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/class",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/class/:classId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"class description 8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class/561ec5cab9e44cdb8f742f16e1bffc01",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class",
+								"561ec5cab9e44cdb8f742f16e1bffc01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/class/:classId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class/561ec5cab9e44cdb8f742f16e1bffc01",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class",
+								"561ec5cab9e44cdb8f742f16e1bffc01"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Offer",
+			"item": [
+				{
+					"name": "/offer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"offer description\",\n    \"value\": 200,\n    \"offer_type\": \"Referral\",\n    \"max_count\": 200,\n    \"currency\": \"USD\",\n    \"instructor_id\": \"ee233334ba9a42d389919fdcbb817264\",\n    \"class_id\": \"561ec5cab9e44cdb8f742f16e1bffc01\",\n    \"student_id\": \"c497999d8bf9475cb92cf464860bc683\",\n    \"location_id\": \"8f0fd0247b6040be896db9a4b4b3ac60\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/offer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"offer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/offer/:offerId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/offer/6d3cfb29e6704f3ebd25b82b745d7e06",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"offer",
+								"6d3cfb29e6704f3ebd25b82b745d7e06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/offer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/offer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"offer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/offer/:offerId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"offer description 8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/offer/6d3cfb29e6704f3ebd25b82b745d7e06",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"offer",
+								"6d3cfb29e6704f3ebd25b82b745d7e06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/offer/:offerId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/offer/6d3cfb29e6704f3ebd25b82b745d7e06",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"offer",
+								"6d3cfb29e6704f3ebd25b82b745d7e06"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ClassReview",
+			"item": [
+				{
+					"name": "/class/:classId/review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"class description 1\",\n    \"instructor_id\": \"ee233334ba9a42d389919fdcbb817264\",\n    \"student_id\": \"c497999d8bf9475cb92cf464860bc683\",\n    \"rating\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class/561ec5cab9e44cdb8f742f16e1bffc01/review",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class",
+								"561ec5cab9e44cdb8f742f16e1bffc01",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/class/:classId/review/:reviewId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"class description 3\",\n    \"instructor_id\":\"5c2d4788371911eb98b67140ba9533a5\",\n    \"location_id\": \"8f0fd0247b6040be896db9a4b4b3ac60\",\n    \"class_level\": 3,\n    \"format\": \"OFFLINE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class/561ec5cab9e44cdb8f742f16e1bffc01/review/fa82a514e03a45409731035fc54de14b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class",
+								"561ec5cab9e44cdb8f742f16e1bffc01",
+								"review",
+								"fa82a514e03a45409731035fc54de14b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/class/:classid/review",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class/561ec5cab9e44cdb8f742f16e1bffc01/review",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class",
+								"561ec5cab9e44cdb8f742f16e1bffc01",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/class/:classId/review/:reviewId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"class description 8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class/561ec5cab9e44cdb8f742f16e1bffc01/review/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class",
+								"561ec5cab9e44cdb8f742f16e1bffc01",
+								"review",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/class/:classId/review/:reviewId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class/561ec5cab9e44cdb8f742f16e1bffc01/review/fa82a514e03a45409731035fc54de14b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class",
+								"561ec5cab9e44cdb8f742f16e1bffc01",
+								"review",
+								"fa82a514e03a45409731035fc54de14b"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/location",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/location",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location_id\": \"3c3a7218-e1b9-4e70-bfe4-08f276e5f279\",\n    \"city\": \"Santa Clara\",\n    \"state\": \"CA\",\n    \"country\": \"United States\",\n    \"zipcode\": 95051,\n    \"latitude\": 1,\n    \"longitude\":  1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/location",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/location",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location_id\": \"3c3a7218-e1b9-4e70-bfe4-08f276e5f279\",\n    \"city\": \"Santa Clara\",\n    \"state\": \"CA\",\n    \"country\": \"United States\",\n    \"zipcode\": 95051,\n    \"latitude\": 1,\n    \"longitude\":  1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/location/3c3a7218-e1b9-4e70-bfe4-08f276e5f279",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"location",
+								"3c3a7218-e1b9-4e70-bfe4-08f276e5f279"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Reset",
+			"item": [
+				{
+					"name": "Reset",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDcyOTI1MDksIm5iZiI6MTYwNzI5MjUwOSwianRpIjoiNDBhZjQwNzktOGJkZC00NmMwLTg3ZDEtZTAxZThiODcxMGIyIiwiZXhwIjoxNjA3MjkzNDA5LCJpZGVudGl0eSI6InN0dWRlbnQzIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.Ri_EXqwnUZjGGqZeoK_14rZOhxw1oCNTzZg8F6o2HiA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/reset",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ClassSession",
+			"item": [
+				{
+					"name": "/class-session",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"count\": 1,\n    \"student_id\": \"6b8478ab-3e7d-4ca8-9524-25458fa47f14\",\n    \"class_id\": \"f681dfb4-0555-4013-aaac-4545ffba8a87\",\n    \"offer_id\": \"86a5eab5-55da-4d5d-8e25-02b4f880fd17\",\n    \"class_session_id\": \"b3cb787c-f769-402b-b08a-79def45f330d\",\n    \"offer_usage_id\": \"9aada7c7-ecfd-4ff2-86a7-681800e2ca20\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class-session",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class-session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/class-session?total_cost",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"count\": 1,\n    \"student_id\": \"6b8478ab-3e7d-4ca8-9524-25458fa47f14\",\n    \"class_id\": \"f681dfb4-0555-4013-aaac-4545ffba8a87\",\n    \"offer_id\": \"86a5eab5-55da-4d5d-8e25-02b4f880fd17\",\n    \"class_session_id\": \"b3cb787c-f769-402b-b08a-79def45f330d\",\n    \"offer_usage_id\": \"9aada7c7-ecfd-4ff2-86a7-681800e2ca20\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/class-session?total_cost",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"class-session"
+							],
+							"query": [
+								{
+									"key": "total_cost",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

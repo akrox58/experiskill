@@ -58,5 +58,9 @@ class BaseService:
         return {"statusCode": 200, "message": "successfully deleted records"}
 
     @classmethod
-    def get_by_filter_and_paginate(self, model, limit=1, **filters):
+    def get_by_filter_and_paginate(self, model, limit=1):
         return model.objects.paginate(1, limit)
+
+    @classmethod
+    def do_pagination(self, model, page=1, per_page=1):
+        return model.objects.paginate(page, per_page)

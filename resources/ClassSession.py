@@ -38,15 +38,21 @@ class ClassSessionResource(Resource):
     def get(self):
         reg_parser = reqparse.RequestParser()
         reg_parser.add_argument('location', type=str)
-        reg_parser.add_argument('total_cost', type=float)
-        reg_parser.add_argument('student_id', type=str)
-        reg_parser.add_argument('instructor_id', type=str)
-        reg_parser.add_argument('offer_id', type=str)
+        reg_parser.add_argument('total_cost')
+        reg_parser.add_argument('student', type=str)
+        reg_parser.add_argument('instructor', type=str)
+        reg_parser.add_argument('offer', type=str)
         body = strip_payload(reg_parser.parse_args())
         result = {}
-        if "location" in body:
-            result = self.class_session_service.find_class_sessions_by_params_and_paginate(**{"location_id": body["location"]})
-        return make_response({}, 200)
+        total = 0
+        if "total_cost" in body:
+            result = self.class_session_service.find_class_sessions_and_paginate()
+            for page_number in result.iter_pages():
+                page_result = self.class_session_service.paginate_class_session(page_number, 1)
+                for doc in page_result.items:
+                    print(doc.total)
+                    total = float(doc.total) + total
+        return make_response({"total_cost": total, "message": "total cost for location"}, 200)
 
     def post(self):
         reg_parser = reqparse.RequestParser()
