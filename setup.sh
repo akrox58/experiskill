@@ -442,14 +442,7 @@ curl --location --request POST 'http://127.0.0.1:5000/class-session' \
 }'
 
 
-curl --location --request GET 'http://127.0.0.1:5000/class-session?location=701d4aec534340faa48c15926c89e445' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "count": 1,
-    "student_id": "6b8478ab-3e7d-4ca8-9524-25458fa47f14",
-    "class_id": "f681dfb4-0555-4013-aaac-4545ffba8a87",
-    "offer_id": "86a5eab5-55da-4d5d-8e25-02b4f880fd17",
-    "class_session_id": "b3cb787c-f769-402b-b08a-79def45f330d",
-    "offer_usage_id": "9aada7c7-ecfd-4ff2-86a7-681800e2ca20"
-}'
-
+curl --location --request GET 'http://127.0.0.1:5000/class-session?total_cost'
+curl --location --request GET 'http://127.0.0.1:5000/class-session?total_cost&student=6b8478ab-3e7d-4ca8-9524-25458fa47f14'
+curl --location --request GET 'http://127.0.0.1:5000/class-session?total_cost&instructor=721f0c77-1ecb-47c7-a62d-93e923e02f8b'
+curl --location --request GET 'http://127.0.0.1:5000/class-session?total_cost&student=6b8478ab-3e7d-4ca8-9524-25458fa47f14&instructor=721f0c77-1ecb-47c7-a62d-93e923e02f8b'

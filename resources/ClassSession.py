@@ -1,4 +1,4 @@
-from flask import jsonify, make_response
+from flask import jsonify, make_response, request
 from flask_restful import fields, marshal_with, reqparse, Resource
 from hashlib import md5
 import math
@@ -36,23 +36,48 @@ class ClassSessionResource(Resource):
         self.pricing_service = PricingService()
 
     def get(self):
-        reg_parser = reqparse.RequestParser()
-        reg_parser.add_argument('location', type=str)
-        reg_parser.add_argument('total_cost')
-        reg_parser.add_argument('student', type=str)
-        reg_parser.add_argument('instructor', type=str)
-        reg_parser.add_argument('offer', type=str)
-        body = strip_payload(reg_parser.parse_args())
-        result = {}
+
+        body = request.args
+        response = {}
+        instructor = []
+        student = []
         total = 0
+
+        result = self.class_session_service.find_class_sessions_and_paginate()
         if "total_cost" in body:
-            result = self.class_session_service.find_class_sessions_and_paginate()
             for page_number in result.iter_pages():
                 page_result = self.class_session_service.paginate_class_session(page_number, 1)
                 for doc in page_result.items:
-                    print(doc.total)
-                    total = float(doc.total) + total
-        return make_response({"total_cost": total, "message": "total cost for location"}, 200)
+                    if 'student' in body and 'instructor' in body:
+                        if str(doc.student_id) == str(body['student']) and str(doc.instructor_id) == str(body['instructor']):
+                            total = float(doc.total) + total
+                    elif 'student' in body:
+                        if str(doc.student_id) == str(body['student']):
+                            total = float(doc.total) + total
+                    elif 'instructor' in body:
+                        if str(doc.instructor_id) == str(body['instructor']):
+                            total = float(doc.total) + total
+                    else:
+                        total = float(doc.total) + total
+            response['total_cost'] = total
+
+        if 'instructor' in body:
+            for page_number in result.iter_pages():
+                page_result = self.class_session_service.paginate_class_session(page_number, 1)
+                for doc in page_result.items:
+                    if str(doc.instructor_id) == str(body['instructor']):
+                        instructor.append(doc)
+            response['instructor'] = instructor
+
+        if 'student' in body:
+            for page_number in result.iter_pages():
+                page_result = self.class_session_service.paginate_class_session(page_number, 1)
+                for doc in page_result.items:
+                    if str(doc.student_id) == str(body['student']):
+                        student.append(doc)
+            response['student'] = student
+
+        return make_response(response, 200)
 
     def post(self):
         reg_parser = reqparse.RequestParser()
